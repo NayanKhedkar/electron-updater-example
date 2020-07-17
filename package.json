@@ -3,7 +3,11 @@
   "version": "0.7.1",
   "main": "main.js",
   "description": "electron-updater example project",
-  "author": "Matt Haggard",
+  "author": "Nayan Khedkar",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/johndyer24/electron-auto-update-example.git"
+  },
   "scripts": {
     "start": "electron .",
     "publish": "build -p always"
