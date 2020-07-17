@@ -1,0 +1,29 @@
+{
+  "name": "electron-updater-example",
+  "version": "0.7.1",
+  "main": "main.js",
+  "description": "electron-updater example project",
+  "author": "Matt Haggard",
+  "scripts": {
+    "start": "electron .",
+    "publish": "build -p always"
+  },
+  "build": {
+    "appId": "com.github.iffy.electronupdaterexample",
+    "mac": {
+      "category": "your.app.category.type",
+      "target": [
+        "zip",
+        "dmg"
+      ]
+    }
+  },
+  "dependencies": {
+    "electron": "^9.1.0",
+    "electron-builder": "^22.7.0"
+  },
+  "devDependencies": {
+    "electron-log": "^4.2.2",
+    "electron-updater": "^4.3.1"
+  }
+}
