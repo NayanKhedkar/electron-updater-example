@@ -1,7 +1,6 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const { autoUpdater } = require('electron-updater');
-// deploy_app
-// ceb0b93cf8d7a0f1bb04331149f226fa67019c1a
+
 let mainWindow;
 
 function createWindow () {

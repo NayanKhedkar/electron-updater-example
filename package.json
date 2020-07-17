@@ -1,6 +1,6 @@
 {
   "name": "electron-updater-example",
-  "version": "0.7.1",
+  "version": "1.0.0",
   "main": "main.js",
   "description": "electron-updater example project",
   "author": "Nayan Khedkar",
@@ -11,25 +11,41 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
-    "build": "electron-builder build --mac --win --publish never",
-    "deploy": "electron-builder build --mac --win --publish always"
+    "build": "electron-builder build --win --publish never",
+    "deploy": "electron-builder build --win --publish always"
   },
   "build": {
-    "appId": "com.example.ElectronAutoUpdate",
-    "mac": {
-      "category": "your.app.category.type",
+    "appId": "com.electron.electron-updater",
+    "productName": "Electron Auto Update",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "NayanKhedkar",
+        "repo": "electron-updater-example"
+      }
+    ],
+    "win": {
+      "publish": [
+        "github"
+      ],
       "target": [
-        "zip",
-        "dmg"
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
       ]
     }
   },
   "dependencies": {
-    "electron": "^9.1.0",
-    "electron-builder": "^22.7.0"
-  },
-  "devDependencies": {
     "electron-log": "^4.2.2",
     "electron-updater": "^4.3.1"
+  },
+  "devDependencies": {
+    "electron": "^9.1.0",
+    "electron-builder": "^22.7.0"
+
   }
 }
