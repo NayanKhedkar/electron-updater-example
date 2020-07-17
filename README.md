@@ -5,7 +5,7 @@ If you can't use GitHub, you can use other providers:
 - [Complete electron-updater HTTP example](https://gist.github.com/iffy/0ff845e8e3f59dbe7eaf2bf24443f104)
 - [Complete electron-updater from gitlab.com private repo example](https://gist.github.com/Slauta/5b2bcf9fa1f6f6a9443aa6b447bcae05)
 
-**NOTE:** If you want to run through this whole process, you will need to fork this repo on GitHub and replace all instances of `iffy` with your GitHub username before doing the following steps.
+**NOTE:** If you want to run through this whole process, you will need to fork this repo on GitHub and replace all instances of `NayanKhedkar` with your GitHub username before doing the following steps.
 
 1. For macOS, you will need a code-signing certificate.
 
@@ -20,7 +20,7 @@ If you can't use GitHub, you can use other providers:
             "build": {
                 "publish": [{
                     "provider": "github",
-                    "owner": "iffy",
+                    "owner": "NayanKhedkar",
                     "repo": "electron-updater-example"
                 }],
                 ...
@@ -55,11 +55,11 @@ If you can't use GitHub, you can use other providers:
 
         npm run publish
 
-   If you want to publish for more platforms, edit the `publish` script in `package.json`.  For instance, to build for Windows and macOS:
+   If you want to publish for more platforms, edit the `deploy` script in `package.json`.  For instance, to build for Windows and macOS:
 
         ...
         "scripts": {
-            "publish": "build --mac --win -p always"
+            deploy": "electron-builder build --mac --win --publish always"
         },
         ...
 
